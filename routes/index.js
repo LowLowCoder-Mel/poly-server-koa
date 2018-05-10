@@ -14,7 +14,7 @@ router.get('/', async (ctx, next) => {
   
     await ctx.render('index', {});
   });
-router.use('/users', users.routes(), users.allowedMethods());
+router.use('/', users.routes(), users.allowedMethods());
 router.use('/files', files.routes(), files.allowedMethods());
 router.use('/collect', collect.routes(), collect.allowedMethods());
 router.use('/wx', wx.routes(), files.allowedMethods());
