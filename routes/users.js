@@ -1,7 +1,7 @@
 'use strict'
 
 const router = require('koa-router')();
-import {sendCaptcha, getUserList, register, removeUser} from '../app/controller/user';
+import {sendCaptcha, getUserList, register, removeUser} from '../models/user';
 
 /**
  * 发送验证码

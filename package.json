@@ -1,6 +1,8 @@
 {
   "name": "poly-koa2",
   "version": "0.0.1",
+  "repository": "git@github.com:zhang6321615/poly-server-koa.git",
+  "license": "MIT",
   "scripts": {
     "start": "./node_modules/.bin/nodemon bin/run",
     "koa": "./node_modules/.bin/runkoa bin/www",
@@ -13,9 +15,6 @@
     "dev": "export NODE_ENV=dev && ./node_modules/.bin/runkoa bin/www"
   },
   "dependencies": {
-    "co": "^4.6.0",
-    "debug": "^2.2.0",
-    "ejs": "^2.5.9",
     "koa": "^2.3.0",
     "koa-body": "^2.3.0",
     "koa-bodyparser": "^2.0.1",
@@ -28,6 +27,9 @@
     "koa-router": "^7.0.0",
     "koa-static": "^1.5.2",
     "koa-views": "^5.0.1",
+    "co": "^4.6.0",
+    "debug": "^2.2.0",
+    "ejs": "^2.5.9",
     "lodash": "^4.17.4",
     "log4js": "^2.3.3",
     "mongoose": "^4.11.6",

@@ -1,7 +1,7 @@
 'use strict'
 
 const router = require('koa-router')();
-import {getTheCollectList,getCollectList, create,docreate, removeCollect} from '../app/controller/collect';
+import {getTheCollectList,getCollectList, create,docreate, removeCollect} from '../models/collect';
 
 router.get('/', function (ctx, next) {
   ctx.body = 'this a getTheCollectList response!';

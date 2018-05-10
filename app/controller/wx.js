@@ -1,7 +1,9 @@
-import {token} from '../modal/token'
-import {resdata, errdata} from '../../utils/serve'
-import request from 'request'
-import sha1 from 'sha1'
+'use strict'
+
+import {token} from '../../models/token';
+import {resdata, errdata} from '../../utils/serve';
+import request from 'request';
+import sha1 from 'sha1';
 
 const logUtil = require('../../utils/logUtil');
 
@@ -42,6 +44,7 @@ async function getJsapiTicket(token) {
       })
     })
 }
+
 exports.getAccessToken = async (ctx, next) => {
     try {
         let list = await token.find();

@@ -1,7 +1,7 @@
 'use strict'
 
 const router = require('koa-router')();
-import {createQrcode, fileUp, fileList, removeFile, readFile, fileDetail} from '../app/controller/files';
+import {createQrcode, fileUp, fileList, removeFile, readFile, fileDetail} from '../models/files';
 
 router.get('/', async (ctx, next) => {
     console.log(ctx);
