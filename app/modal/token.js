@@ -1,3 +1,5 @@
+'use strict'
+
 let mongoose = require("mongoose");
 let Schema = mongoose.Schema;
 let TokenSchema = new Schema({
@@ -5,37 +7,37 @@ let TokenSchema = new Schema({
     limit: String,
     startTmp: String,
     jsticket: String,
-	createTime: {
+    createTime: {
         type: Date,
         dafault: Date.now()
     },
-	updateTime: {
+    updateTime: {
         type: Date,
         dafault: Date.now()
     },
 })
 
-TokenSchema.pre('save', function(next) {
+TokenSchema.pre('save', function (next) {
     if (this.isNew) {
-      this.createTime = this.updateTime = Date.now()
-    }
-    else {
-      this.updateTime = Date.now()
+        this.createTime = this.updateTime = Date.now()
+    } else {
+        this.updateTime = Date.now()
     }
     next()
 })
-class Token{
+
+class Token {
     constructor() {
-          this.token = mongoose.model("token", TokenSchema);
+        this.token = mongoose.model("token", TokenSchema);
     }
-    find(dataArr={}, skip={}) {
+    find(dataArr = {}, skip = {}) {
         const self = this;
-        return new Promise(function (resolve, reject){
-            self.token.find(dataArr,null,skip, function(e, docs) {
-                if(e){
-                    console.log('e:',e);
+        return new Promise(function (resolve, reject) {
+            self.token.find(dataArr, null, skip, function (e, docs) {
+                if (e) {
+                    console.log('e:', e);
                     reject(e);
-                }else{
+                } else {
                     resolve(docs);
                 }
             })
@@ -43,18 +45,18 @@ class Token{
     }
     create(dataArr) {
         const self = this;
-        return new Promise(function (resolve, reject){
+        return new Promise(function (resolve, reject) {
             let user = new self.token({
                 tokenid: dataArr.tokenid,
                 limit: dataArr.limit,
                 startTmp: dataArr.startTmp,
                 jsticket: dataArr.jsticket
             });
-            user.save(function(e, data, numberAffected) {
+            user.save(function (e, data, numberAffected) {
                 // if (e) response.send(e.message);
-                if(e){
+                if (e) {
                     reject(e);
-                }else{
+                } else {
                     resolve(data);
                 }
             });
@@ -62,13 +64,13 @@ class Token{
     }
     delete(dataArr) {
         const self = this;
-        return new Promise(function (resolve, reject){
+        return new Promise(function (resolve, reject) {
             self.token.remove({
                 _id: dataArr.id
-            }, function(e, data) {
-                if(e){
+            }, function (e, data) {
+                if (e) {
                     reject(e);
-                }else{
+                } else {
                     resolve(data);
                 }
             });
@@ -77,4 +79,6 @@ class Token{
 }
 
 let token = new Token()
-export {token}
+export {
+    token
+}

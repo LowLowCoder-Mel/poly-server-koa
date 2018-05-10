@@ -1,8 +1,9 @@
-let log4js = require('log4js');
+'use strict'
 
-let logConfig = require('../config/logConfig');
+const log4js = require('log4js');
+const logConfig = require('../config/logConfig');
 
-//加载配置文件
+// load config
 log4js.configure(logConfig);
 
 let logUtil = {};

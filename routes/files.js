@@ -1,5 +1,7 @@
+'use strict'
+
 const router = require('koa-router')();
-import {createQrcode, fileUp, fileList, removeFile, readFile, fileDetail} from '../app/controller/files'
+import {createQrcode, fileUp, fileList, removeFile, readFile, fileDetail} from '../app/controller/files';
 
 router.get('/', async (ctx, next) => {
     console.log(ctx);
@@ -7,12 +9,14 @@ router.get('/', async (ctx, next) => {
     ctx.res.writeHead(200, {'Content-Type': 'image/png'});
     // ctx.res.end();
 });
+
 router.post('/qrImage', async (ctx, next) => {
     console.log(ctx.request.body);
     let reqBody = ctx.request.body;
     ctx.body = await createQrcode(reqBody.text);
     ctx.res.writeHead(200, {'Content-Type': 'image/png'});
 });
+
 router.get('/getImage', async (ctx, next) => {
     console.log(ctx.query.file);
     let list = await readFile(ctx.query.file)
@@ -21,11 +25,13 @@ router.get('/getImage', async (ctx, next) => {
         ctx.res.writeHead(200, {'Content-Type': 'image/png'});
     }
 });
+
 router.post('/ImageDetail', async (ctx, next) => {
     let reqBody = ctx.request.body;
     let list = await fileDetail(reqBody.id)
     ctx.body = list;
 });
+
 router.post('/fileUp', async (ctx, next) => {
     console.log(ctx.request.body.fields.userid)
     // console.log(ctx.request.body.files);
@@ -33,10 +39,12 @@ router.post('/fileUp', async (ctx, next) => {
     const userid = ctx.request.body.fields.userid;
     ctx.body = await fileUp(file, userid);
 });
+
 router.post('/fileList', async (ctx, next) => {
     let reqBody = ctx.request.body;
     ctx.body = await fileList(reqBody, next);
 });
+
 router.del('/removeFile', async (ctx, next) => {
     console.log(ctx.request.body);
     let reqBody = ctx.request.body;

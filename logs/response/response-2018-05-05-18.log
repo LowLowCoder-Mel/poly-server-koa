@@ -1,0 +1,300 @@
+[2018-05-05T18:01:58.451] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 1
+response status: 404
+response body: 
+undefined
+*************** response log end ***************
+
+[2018-05-05T18:03:40.517] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /getUser
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 1
+response status: 404
+response body: 
+undefined
+*************** response log end ***************
+
+[2018-05-05T18:03:45.715] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /getUser/1
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 0
+response status: 404
+response body: 
+undefined
+*************** response log end ***************
+
+[2018-05-05T18:08:02.968] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 10
+response status: 200
+response body: 
+"<!DOCTYPE html>\n<html>\n  <head>\n    <title>PolyHome Of KOA2</title>\n    <link rel='stylesheet' href='/stylesheets/style.css' />\n  </head>\n  <body>\n    <h1>PolyHome Of KOA2</h1>\n    <p>EJS Welcome to PolyHome Of KOA2</p>\n  </body>\n</html>\n"
+*************** response log end ***************
+
+[2018-05-05T18:09:05.428] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 7
+response status: 200
+response body: 
+"<!DOCTYPE html>\n<html>\n  <head>\n    <title>PolyHome Of KOA2</title>\n    <link rel='stylesheet' href='/stylesheets/style.css' />\n  </head>\n  <body>\n    <h1>PolyHome Of KOA2</h1>\n    <p>EJS Welcome to PolyHome Of KOA2</p>\n  </body>\n</html>\n"
+*************** response log end ***************
+
+[2018-05-05T18:09:05.996] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 2
+response status: 200
+response body: 
+"<!DOCTYPE html>\n<html>\n  <head>\n    <title>PolyHome Of KOA2</title>\n    <link rel='stylesheet' href='/stylesheets/style.css' />\n  </head>\n  <body>\n    <h1>PolyHome Of KOA2</h1>\n    <p>EJS Welcome to PolyHome Of KOA2</p>\n  </body>\n</html>\n"
+*************** response log end ***************
+
+[2018-05-05T18:09:06.494] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 1
+response status: 200
+response body: 
+"<!DOCTYPE html>\n<html>\n  <head>\n    <title>PolyHome Of KOA2</title>\n    <link rel='stylesheet' href='/stylesheets/style.css' />\n  </head>\n  <body>\n    <h1>PolyHome Of KOA2</h1>\n    <p>EJS Welcome to PolyHome Of KOA2</p>\n  </body>\n</html>\n"
+*************** response log end ***************
+
+[2018-05-05T18:09:06.958] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 1
+response status: 200
+response body: 
+"<!DOCTYPE html>\n<html>\n  <head>\n    <title>PolyHome Of KOA2</title>\n    <link rel='stylesheet' href='/stylesheets/style.css' />\n  </head>\n  <body>\n    <h1>PolyHome Of KOA2</h1>\n    <p>EJS Welcome to PolyHome Of KOA2</p>\n  </body>\n</html>\n"
+*************** response log end ***************
+
+[2018-05-05T18:10:55.853] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 10
+response status: 200
+response body: 
+"<!DOCTYPE html>\n<html>\n  <head>\n    <title>PolyHome Of KOA2</title>\n    <link rel='stylesheet' href='/stylesheets/style.css' />\n  </head>\n  <body>\n    <h1>PolyHome Of KOA2</h1>\n    <p>EJS Welcome to PolyHome Of KOA2</p>\n  </body>\n</html>\n"
+*************** response log end ***************
+
+[2018-05-05T18:12:43.982] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 10
+response status: 200
+response body: 
+"<!DOCTYPE html>\n<html>\n  <head>\n    <title>PolyHome Of KOA2</title>\n    <link rel='stylesheet' href='/stylesheets/style.css' />\n  </head>\n  <body>\n    <h1>PolyHome Of KOA2</h1>\n    <p>EJS Welcome to PolyHome Of KOA2</p>\n  </body>\n</html>\n"
+*************** response log end ***************
+
+[2018-05-05T18:14:40.767] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 11
+response status: 200
+response body: 
+"<!DOCTYPE html>\n<html>\n  <head>\n    <title>PolyHome Of KOA2</title>\n    <link rel='stylesheet' href='/stylesheets/style.css' />\n  </head>\n  <body>\n    <h1>PolyHome Of KOA2</h1>\n    <p>EJS Welcome to PolyHome Of KOA2</p>\n  </body>\n</html>\n"
+*************** response log end ***************
+
+[2018-05-05T18:15:16.479] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 8
+response status: 200
+response body: 
+"<!DOCTYPE html>\n<html>\n  <head>\n    <title>PolyHome Of KOA2</title>\n    <link rel='stylesheet' href='/stylesheets/style.css' />\n  </head>\n  <body>\n    <h1>PolyHome Of KOA2</h1>\n    <p>EJS Welcome to PolyHome Of KOA2</p>\n  </body>\n</html>\n"
+*************** response log end ***************
+
+[2018-05-05T18:15:17.178] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 2
+response status: 200
+response body: 
+"<!DOCTYPE html>\n<html>\n  <head>\n    <title>PolyHome Of KOA2</title>\n    <link rel='stylesheet' href='/stylesheets/style.css' />\n  </head>\n  <body>\n    <h1>PolyHome Of KOA2</h1>\n    <p>EJS Welcome to PolyHome Of KOA2</p>\n  </body>\n</html>\n"
+*************** response log end ***************
+
+[2018-05-05T18:15:17.735] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 1
+response status: 200
+response body: 
+"<!DOCTYPE html>\n<html>\n  <head>\n    <title>PolyHome Of KOA2</title>\n    <link rel='stylesheet' href='/stylesheets/style.css' />\n  </head>\n  <body>\n    <h1>PolyHome Of KOA2</h1>\n    <p>EJS Welcome to PolyHome Of KOA2</p>\n  </body>\n</html>\n"
+*************** response log end ***************
+
+[2018-05-05T18:15:18.179] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 2
+response status: 200
+response body: 
+"<!DOCTYPE html>\n<html>\n  <head>\n    <title>PolyHome Of KOA2</title>\n    <link rel='stylesheet' href='/stylesheets/style.css' />\n  </head>\n  <body>\n    <h1>PolyHome Of KOA2</h1>\n    <p>EJS Welcome to PolyHome Of KOA2</p>\n  </body>\n</html>\n"
+*************** response log end ***************
+
+[2018-05-05T18:15:52.427] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 7
+response status: 200
+response body: 
+"<!DOCTYPE html>\n<html>\n  <head>\n    <title>PolyHome Of KOA2</title>\n    <link rel='stylesheet' href='/stylesheets/style.css' />\n  </head>\n  <body>\n    <h1>PolyHome Of KOA2</h1>\n    <p>EJS Welcome to PolyHome Of KOA2</p>\n  </body>\n</html>\n"
+*************** response log end ***************
+
+[2018-05-05T18:19:04.496] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 8
+response status: 200
+response body: 
+"<!DOCTYPE html>\n<html>\n  <head>\n    <title>PolyHome Of KOA2</title>\n    <link rel='stylesheet' href='/stylesheets/style.css' />\n  </head>\n  <body>\n    <h1>PolyHome Of KOA2</h1>\n    <p>EJS Welcome to PolyHome Of KOA2</p>\n  </body>\n</html>\n"
+*************** response log end ***************
+
+[2018-05-05T18:19:05.786] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 1
+response status: 200
+response body: 
+"<!DOCTYPE html>\n<html>\n  <head>\n    <title>PolyHome Of KOA2</title>\n    <link rel='stylesheet' href='/stylesheets/style.css' />\n  </head>\n  <body>\n    <h1>PolyHome Of KOA2</h1>\n    <p>EJS Welcome to PolyHome Of KOA2</p>\n  </body>\n</html>\n"
+*************** response log end ***************
+
+[2018-05-05T18:19:06.281] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 2
+response status: 200
+response body: 
+"<!DOCTYPE html>\n<html>\n  <head>\n    <title>PolyHome Of KOA2</title>\n    <link rel='stylesheet' href='/stylesheets/style.css' />\n  </head>\n  <body>\n    <h1>PolyHome Of KOA2</h1>\n    <p>EJS Welcome to PolyHome Of KOA2</p>\n  </body>\n</html>\n"
+*************** response log end ***************
+
+[2018-05-05T18:19:06.601] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 2
+response status: 200
+response body: 
+"<!DOCTYPE html>\n<html>\n  <head>\n    <title>PolyHome Of KOA2</title>\n    <link rel='stylesheet' href='/stylesheets/style.css' />\n  </head>\n  <body>\n    <h1>PolyHome Of KOA2</h1>\n    <p>EJS Welcome to PolyHome Of KOA2</p>\n  </body>\n</html>\n"
+*************** response log end ***************
+
+[2018-05-05T18:19:06.878] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 0
+response status: 200
+response body: 
+"<!DOCTYPE html>\n<html>\n  <head>\n    <title>PolyHome Of KOA2</title>\n    <link rel='stylesheet' href='/stylesheets/style.css' />\n  </head>\n  <body>\n    <h1>PolyHome Of KOA2</h1>\n    <p>EJS Welcome to PolyHome Of KOA2</p>\n  </body>\n</html>\n"
+*************** response log end ***************
+
+[2018-05-05T18:19:07.134] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 1
+response status: 200
+response body: 
+"<!DOCTYPE html>\n<html>\n  <head>\n    <title>PolyHome Of KOA2</title>\n    <link rel='stylesheet' href='/stylesheets/style.css' />\n  </head>\n  <body>\n    <h1>PolyHome Of KOA2</h1>\n    <p>EJS Welcome to PolyHome Of KOA2</p>\n  </body>\n</html>\n"
+*************** response log end ***************
+
+[2018-05-05T18:19:07.395] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 1
+response status: 200
+response body: 
+"<!DOCTYPE html>\n<html>\n  <head>\n    <title>PolyHome Of KOA2</title>\n    <link rel='stylesheet' href='/stylesheets/style.css' />\n  </head>\n  <body>\n    <h1>PolyHome Of KOA2</h1>\n    <p>EJS Welcome to PolyHome Of KOA2</p>\n  </body>\n</html>\n"
+*************** response log end ***************
+
+[2018-05-05T18:19:07.651] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 1
+response status: 200
+response body: 
+"<!DOCTYPE html>\n<html>\n  <head>\n    <title>PolyHome Of KOA2</title>\n    <link rel='stylesheet' href='/stylesheets/style.css' />\n  </head>\n  <body>\n    <h1>PolyHome Of KOA2</h1>\n    <p>EJS Welcome to PolyHome Of KOA2</p>\n  </body>\n</html>\n"
+*************** response log end ***************
+
+[2018-05-05T18:19:07.921] [INFO] response - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 1
+response status: 200
+response body: 
+"<!DOCTYPE html>\n<html>\n  <head>\n    <title>PolyHome Of KOA2</title>\n    <link rel='stylesheet' href='/stylesheets/style.css' />\n  </head>\n  <body>\n    <h1>PolyHome Of KOA2</h1>\n    <p>EJS Welcome to PolyHome Of KOA2</p>\n  </body>\n</html>\n"
+*************** response log end ***************
+

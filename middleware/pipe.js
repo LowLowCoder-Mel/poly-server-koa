@@ -1,5 +1,6 @@
 const _ = require('lodash');
 const logUtil = require('../utils/logUtil');
+
 export default () => {
     return async (ctx, next) => {
         //响应开始时间
