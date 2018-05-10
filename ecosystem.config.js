@@ -20,8 +20,8 @@ module.exports = {
       user : 'node',
       host : '212.83.163.1',
       ref  : 'origin/master',
-      repo : 'git@github.com:repo.git',
-      path : '/var/www/production',
+      repo : 'git@github.com:zhang6321615/poly-server-koa.git',
+      path : '/home/live/poly_koa',
       'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production',
       env  : {
         NODE_ENV: 'pro'
@@ -32,7 +32,7 @@ module.exports = {
       host : '60.205.151.71',
       ref  : 'origin/master',
       repo : 'git@github.com:zhang6321615/poly-server-koa.git',
-      path : '/home/live/poly_dueros',
+      path : '/home/live/poly_koa',
       'post-deploy' : 'git pull origin master && npm install --registry=https://registry.npm.taobao.org && pm2 startOrRestart ecosystem.config.js && npm run start',
       env  : {
         NODE_ENV: 'dev'
