@@ -7,7 +7,8 @@ module.exports = {
 
     // First application
     {
-      name      : 'poly_koa2'
+      name      : 'poly_koa2',
+      script    : './bin/run'
     },
   ],
 
@@ -33,7 +34,7 @@ module.exports = {
       ref  : 'origin/master',
       repo : 'git@github.com:zhang6321615/poly-server-koa.git',
       path : '/home/live/poly_koa',
-      'post-deploy' : 'git pull origin master && npm install --registry=https://registry.npm.taobao.org && pm2 startOrRestart ecosystem.config.js && npm run start',
+      'post-deploy' : 'git pull origin master && npm install --registry=https://registry.npm.taobao.org && pm2 startOrRestart ecosystem.config.js',
       env  : {
         NODE_ENV: 'dev'
       }
