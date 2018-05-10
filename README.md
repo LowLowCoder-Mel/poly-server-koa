@@ -439,36 +439,3 @@ class Files{
     }
 }
 
-let files = new Files()
-export {files}
-```
-以模块的形式进行封装，可以更方便外层调用
-
-async 异步写操作数据库
-
-```js
-import {files} from '../modal/files'
-readFile =  async (id) => {
-    try {
-        let list = await files.find({_id: id});
-        console.log(list)
-        if(list && list.length > 0) {
-            return fs.readFileSync(list[0].content);   
-        } else {
-            return errdata(null,'9999', 'can not find file')
-        }
-    } catch (err) {
-        return errdata(err);
-    }
-}
-```
-
-### 写在最后
-此项目仅供大家的学习与参考，欢迎多多交流～ 
-微信 <img style="width:30%" src="http://47.88.2.72:2016/getphotoPal/2017-9-5/15046213222746.png"/>
-
-
-
-koa2学习地址参考
-
-https://github.com/guo-yu/koa-guide
