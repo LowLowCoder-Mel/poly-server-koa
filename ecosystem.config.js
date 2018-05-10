@@ -31,7 +31,7 @@ module.exports = {
       user : 'live',
       host : '60.205.151.71',
       ref  : 'origin/master',
-      repo : 'git@git.ourjujia.com:zhangxuesong/duer-node.git',
+      repo : 'git@github.com:zhang6321615/poly-server-koa.git',
       path : '/home/live/poly_dueros',
       'post-deploy' : 'git pull origin master && npm install --registry=https://registry.npm.taobao.org && pm2 startOrRestart ecosystem.config.js && npm run start',
       env  : {
