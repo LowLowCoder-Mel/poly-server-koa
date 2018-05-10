@@ -7,7 +7,7 @@ module.exports = {
 
     // First application
     {
-      name      : 'API'
+      name      : 'poly_koa2'
     },
   ],
 
