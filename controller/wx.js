@@ -1,11 +1,11 @@
 'use strict'
 
-import {token} from '../../models/token';
-import {resdata, errdata} from '../../utils/serve';
+import {token} from '../models/token';
+import {resdata, errdata} from '../utils/serve';
 import request from 'request';
 import sha1 from 'sha1';
 
-const logUtil = require('../../utils/logUtil');
+const logUtil = require('../utils/logUtil');
 
 async function getToken() {
     const self = this;

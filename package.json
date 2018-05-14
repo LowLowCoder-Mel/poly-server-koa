@@ -15,6 +15,9 @@
     "dev": "export NODE_ENV=dev && ./node_modules/.bin/runkoa bin/www"
   },
   "dependencies": {
+    "co": "^4.6.0",
+    "debug": "^2.2.0",
+    "ejs": "^2.5.9",
     "koa": "^2.3.0",
     "koa-body": "^2.3.0",
     "koa-bodyparser": "^2.0.1",
@@ -27,12 +30,10 @@
     "koa-router": "^7.0.0",
     "koa-static": "^1.5.2",
     "koa-views": "^5.0.1",
-    "co": "^4.6.0",
-    "debug": "^2.2.0",
-    "ejs": "^2.5.9",
     "lodash": "^4.17.4",
     "log4js": "^2.3.3",
     "mongoose": "^4.11.6",
+    "node-statsd": "^0.1.1",
     "qr-image": "^3.2.0",
     "runkoa": "^1.5.9",
     "sha1": "^1.1.1"

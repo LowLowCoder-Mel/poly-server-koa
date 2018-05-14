@@ -2,21 +2,15 @@
 
 const router = require('koa-router')();
 
-const users = require('./users');
-const files = require('./files');
-const collect = require('./collect');
-const wx = require('./wx');
+const api_v1_router = require('./api/v1/index');
 
 router.get('/', async (ctx, next) => {
-    ctx.state = {
-      title: 'PolyHome Of KOA2'
-    };
-  
-    await ctx.render('index', {});
-  });
-router.use('/', users.routes(), users.allowedMethods());
-router.use('/files', files.routes(), files.allowedMethods());
-router.use('/collect', collect.routes(), collect.allowedMethods());
-router.use('/wx', wx.routes(), files.allowedMethods());
+  ctx.state = {
+    title: 'PolyHome Of KOA2'
+  };
+
+  await ctx.render('index', {});
+});
+router.use('/api/v1/', api_v1_router.routes(), api_v1_router.allowedMethods());
 
 module.exports = router;

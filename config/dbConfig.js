@@ -1,7 +1,8 @@
 'use strict'
 
 let dbName = "polydb";
-let dbHost = "mongodb://user:polyhome@60.205.151.71:57017/";
+// let dbHost = "mongodb://user:polyhome@60.205.151.71:57017/";
+let dbHost = "mongodb://localhost:27017/";
 let mongoose = require("mongoose");
 
 exports.connect = function (request, response) {

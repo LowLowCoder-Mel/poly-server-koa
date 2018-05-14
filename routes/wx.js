@@ -1,7 +1,7 @@
 'use strict'
 
 const router = require('koa-router')();
-import {getAccessToken, sign} from '../app/controller/wx';
+import {getAccessToken, sign} from '../controller/wx';
 
 router.get('/', function (ctx, next) {
   ctx.body = 'this a users response!';
