@@ -12,8 +12,8 @@ import {
 /**
  * 激活遥看设备
  */
-exports.active = async (reqBody) => {
-    let req = JSON.parse(reqBody);
+exports.active = async (data) => {
+    let req = JSON.parse(data);
     let dataArr = {
         username: req.username,
         password: req.password,
@@ -31,13 +31,13 @@ exports.active = async (reqBody) => {
         let user = await activeCtrl.getUserByUserName(req.username);
         if (user) {
             // {f: "5CCF7F34A37D", username: "15712908185", password: "12345678", accounttype: 1}
-            let req = {
+            let req_yaokan = {
                 f: dataArr.mac,
                 username: dataArr.username,
                 password: dataArr.password,
                 accounttype: 1
             }
-            let result = await apiUtil.reActiveDevice(req);
+            let result = await apiUtil.reActiveDevice(req_yaokan);
             respon = resdata(result.code, result.message, {"result": "success"});
             let new_user = {      
                 username: dataArr.username,
@@ -50,13 +50,13 @@ exports.active = async (reqBody) => {
             });
             let json = await activeCtrl.updateUserDevice(new_user);
         } else {
-            let req = {
+            let req_yaokan = {
                 f: dataArr.mac,
                 username: dataArr.username,
                 password: dataArr.password,
                 accounttype: 1
             }
-            let result = await apiUtil.activeDevice(req);
+            let result = await apiUtil.activeDevice(req_yaokan);
             respon = resdata(result.code, result.message, {"result": "success"});
             let new_user = {      
                 username: dataArr.username,
@@ -77,8 +77,8 @@ exports.active = async (reqBody) => {
 /**
  * 给指定家庭增加红外码库
  */
-exports.add_rc_code = async (reqBody) => {
-    let req = JSON.parse(reqBody);
+exports.add_rc_code = async (data) => {
+    let req = JSON.parse(data);
     try {
         let respon = {};
         let user = await codesCtrl.getCodesByFamilyId(req.family_id);
@@ -105,7 +105,7 @@ exports.add_rc_code = async (reqBody) => {
                 new_codes.devices.push(old_device);
             });
             new_codes.devices.push(device);
-            let json = await codesCtrl.add_codes(new_codes);
+            let json = await codesCtrl.addCodes(new_codes);
             respon = resdata(0, "Add RC codes Success", {"result": "success"});
         } else {
             let new_codes = {
