@@ -5,9 +5,9 @@ module.exports = {
    */
   apps : [
 
-    // First application
+    // 第三方设备处理服务
     {
-      name      : 'poly_koa2',
+      name      : 'poly_3device',
       script    : './bin/run'
     },
   ],
@@ -18,12 +18,12 @@ module.exports = {
    */
   deploy : {
     production : {
-      user : 'node',
-      host : '212.83.163.1',
+      user : 'live',
+      host : '123.57.139.200',
       ref  : 'origin/master',
       repo : 'git@github.com:zhang6321615/poly-server-koa.git',
-      path : '/home/live/poly_koa',
-      'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production',
+      path : '/home/live/poly_3device',
+      'post-deploy' : 'git pull origin master && npm install --registry=https://registry.npm.taobao.org && pm2 startOrRestart ecosystem.config.js',
       env  : {
         NODE_ENV: 'pro'
       }
@@ -33,7 +33,7 @@ module.exports = {
       host : '60.205.151.71',
       ref  : 'origin/master',
       repo : 'git@github.com:zhang6321615/poly-server-koa.git',
-      path : '/home/live/poly_koa',
+      path : '/home/live/poly_3device',
       'post-deploy' : 'git pull origin master && npm install --registry=https://registry.npm.taobao.org && pm2 startOrRestart ecosystem.config.js',
       env  : {
         NODE_ENV: 'dev'
