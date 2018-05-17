@@ -45,7 +45,7 @@ app.on('error', function (err, ctx) {
 let apiUtil = require('./utils/apiUtil');
 let server = process.env.NODE_ENV == 'dev' ? "测试版" : "正式版";
 let date = new Date();
-let content = `=== Service: poly_3device \n=== Time   : ${date.toLocaleString()}\n=== 已在${server}服务器上运行`;
+let content = `Service: poly_3device \nTime   : ${date.toLocaleString()}\n已在${server}服务器上运行`;
 
 if (process.env.NODE_ENV == 'dev' || process.env.NODE_ENV == 'pro') {
   apiUtil.NotifyDingDing(content).then();
