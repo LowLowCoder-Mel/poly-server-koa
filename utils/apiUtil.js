@@ -181,7 +181,6 @@ function getSignature(data){
  */
 exports.NotifyDingDing = (content) => {
     return new Promise(function(resolve, reject){
-
         let options = {
             url:  "https://oapi.dingtalk.com/robot/send?access_token=a794eb406a700ca130b2ae72022f8dce7781b3607729b588131f9335c9f92c6a",
             method: 'POST',
