@@ -1,6 +1,7 @@
 'use strict'
 
 const StatsD = require('node-statsd');
+const apiUtil = require('../utils/apiUtil');
 
 const statsdClient = new StatsD({
     host: "123.57.139.200",

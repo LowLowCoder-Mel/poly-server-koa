@@ -34,12 +34,21 @@ app.use(views(__dirname + '/views', {
   extension: 'ejs'
 }));
 
-app.use(statsd());
+// app.use(statsd());
 // use route
 app.use(router.routes(), router.allowedMethods());
 
 app.on('error', function (err, ctx) {
   console.error('server handler error');
 });
+
+let apiUtil = require('./utils/apiUtil');
+let server = process.env.NODE_ENV == 'dev' ? "测试版" : "正式版";
+let date = new Date();
+let content = `=== Service: poly_3device \n=== Time   : ${date.toLocaleString()}\n=== 已在${server}服务器上运行`;
+
+if (process.env.NODE_ENV == 'dev' || process.env.NODE_ENV == 'pro') {
+  apiUtil.NotifyDingDing(content).then();
+}
 
 module.exports = app;

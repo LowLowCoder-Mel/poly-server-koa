@@ -87,6 +87,7 @@ exports.add_rc_code = async (data) => {
                 "family_id": user.family_id,
                 "user_id": user.user_id,
                 "sn": req.sn,
+                "rmodel": req.rmodel,
                 "devices": []
             }
             let keycode = JSON.parse(req.keycode);
@@ -112,6 +113,7 @@ exports.add_rc_code = async (data) => {
                 "family_id": req.family_id,
                 "user_id": req.user_id,
                 "sn": req.sn,
+                "rmodel": req.rmodel,
                 "devices": []
             }
             let keycode = JSON.parse(req.keycode);
@@ -124,7 +126,7 @@ exports.add_rc_code = async (data) => {
                 }
             }
             new_codes.devices.push(device);
-            let json = await codesCtrl.add_codes(new_codes);
+            let json = await codesCtrl.addCodes(new_codes);
             respon = resdata(0, "Add RC codes Success", {"result": "success"});
         }
         return respon;

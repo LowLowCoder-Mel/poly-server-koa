@@ -176,3 +176,31 @@ function getSignature(data){
     return returnValue;
 }
 
+/*
+ * WebHook通知 钉钉
+ */
+exports.NotifyDingDing = (content) => {
+    return new Promise(function(resolve, reject){
+
+        let options = {
+            url:  "https://oapi.dingtalk.com/robot/send?access_token=a794eb406a700ca130b2ae72022f8dce7781b3607729b588131f9335c9f92c6a",
+            method: 'POST',
+            timeout: 5000,
+            json: true,
+            body: {
+                msgtype: "text",
+                text: {
+                    content: content
+                }
+            }
+        };
+        request(options, function (err, res, body) {
+            if (!err && res.statusCode == 200){
+                resolve(body);
+            } else {
+                reject(err);
+            }
+        });
+    });
+}
+
