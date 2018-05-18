@@ -3,18 +3,10 @@
 const request = require('request');
 const crypto = require('crypto');
 
-// 环境配置
-// if (process.env.NODE_ENV == undefined){
-//     process.env.NODE_ENV = 'dev'
-// }
-// const path = require('path');
-// const configFile = path.resolve('./config/', process.env.NODE_ENV + '/index.js');
-// const config = require(configFile);
 const yaokan_config = {
     "url": "https://api.yaokongyun.cn/cloudlink/m.php",
     "app_id": "15004523417334"
 }
-
 
 /*
  * 激活接口
@@ -182,15 +174,12 @@ function getSignature(data){
 exports.NotifyDingDing = (content) => {
     return new Promise(function(resolve, reject){
         let options = {
-            url:  "https://oapi.dingtalk.com/robot/send?access_token=a794eb406a700ca130b2ae72022f8dce7781b3607729b588131f9335c9f92c6a",
+            url:  "https://hook.bearychat.com/=bwA9F/incoming/f717b4d701c674028fc6f97b165ac0f0",
             method: 'POST',
             timeout: 5000,
             json: true,
             body: {
-                msgtype: "text",
-                text: {
-                    content: content
-                }
+                "text": content
             }
         };
         request(options, function (err, res, body) {

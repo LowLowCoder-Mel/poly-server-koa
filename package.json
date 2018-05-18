@@ -35,11 +35,12 @@
     "mongoose": "^4.11.6",
     "node-statsd": "^0.1.1",
     "qr-image": "^3.2.0",
+    "request": "^2.86.0",
     "runkoa": "^1.5.9",
     "sha1": "^1.1.1"
   },
   "devDependencies": {
-    "mocha": "^2.4.5",
+    "mocha": "^2.5.3",
     "nodemon": "^1.9.1",
     "should": "^8.3.0",
     "supertest": "^1.2.0"

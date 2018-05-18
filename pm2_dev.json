@@ -1,0 +1,7 @@
+{
+    "name"        : "poly_3device",
+    "script"      : "./bin/run",
+    "env": {
+        "NODE_ENV": "dev"
+    }
+}

@@ -39,6 +39,7 @@ app.use(views(__dirname + '/views', {
 app.use(router.routes(), router.allowedMethods());
 
 app.on('error', function (err, ctx) {
+  console.log(err)
   console.error('server handler error');
 });
 
