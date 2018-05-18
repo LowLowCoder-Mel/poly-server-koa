@@ -11,7 +11,7 @@ scp poly_3device.tar.bz2 live@60.205.151.71:~/
 # 解压
 ssh live@60.205.151.71 'mkdir -p poly_3device && tar -jxf poly_3device.tar.bz2 -C poly_3device'
 # 重启pm2   
-ssh live@60.205.151.71 'rm poly_3device.tar.bz2 && cd poly_3device && pm2 start pm2_dev.json' 
+ssh live@60.205.151.71 'rm poly_3device.tar.bz2 && cd poly_3device && npm install && pm2 start pm2_dev.json' 
 fi
 if [ $1 == 'pro' ];then
 # 复制到服务器上   
