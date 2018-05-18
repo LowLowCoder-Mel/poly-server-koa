@@ -1,27 +1,25 @@
 before_install:
-  - openssl aes-256-cbc -K $encrypted_856a84ee96d8_key -iv $encrypted_856a84ee96d8_iv
-    -in id_rsa.enc -out ~/.ssh/id_rsa -d
-  - chmod 600 ~/.ssh/id_rsa
-  - echo -e "Host 60.205.151.71\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
-  - echo -e "Host 123.57.139.200\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+- openssl aes-256-cbc -K $encrypted_ae06d123a972_key -iv $encrypted_ae06d123a972_iv
+  -in id_rsa.enc -out ~/.ssh/id_rsa -d
+- chmod 600 ~/.ssh/id_rsa
+- echo -e "Host 60.205.151.71\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+- echo -e "Host 123.57.139.200\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 install: npm install
 script: npm run test
 branches:
   only:
-    - master
-    - develop
+  - master
+  - develop
 after_success:
-  - echo "Travis branch = $TRAVIS_BRANCH"
+- echo "Travis branch = $TRAVIS_BRANCH"
 notifications:
   webhooks: https://hook.bearychat.com/=bwA9F/travis/845f7e0798a8a3c7eec6553d05276ffd
 deploy:
-  # deploy master to production
-  - provider: script
-    script: bash scripts/deploy.sh pro
-    on:
-      branch: master
-  # deploy develop to the staging environment
-  - provider: script
-    script: bash scripts/deploy.sh dev
-    on:
-      branch: develop
+- provider: script
+  script: bash scripts/deploy.sh pro
+  on:
+    branch: master
+- provider: script
+  script: bash scripts/deploy.sh dev
+  on:
+    branch: develop
