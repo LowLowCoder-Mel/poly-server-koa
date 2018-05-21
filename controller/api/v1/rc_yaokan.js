@@ -136,3 +136,66 @@ exports.add_rc_code = async (data) => {
         return errdata(err);
     }
 }
+
+/**
+ * 给指定家庭增加红外码库
+ */
+exports.del_rc_code = async (data) => {
+    let req = JSON.parse(data);
+    try {
+        let respon = {};
+        let user = await codesCtrl.getCodesByFamilyId(req.family_id);
+        if (user) {
+            // let new_codes = {
+            //     "family_id": user.family_id,
+            //     "user_id": user.user_id,
+            //     "sn": req.sn,
+            //     "rmodel": req.rmodel,
+            //     "devices": []
+            // }
+            // let keycode = JSON.parse(req.keycode);
+            // let device = {
+            //     "devicetypes": req.devicetypes,
+            //     "brand": req.brand,
+            //     "keycode": {
+            //         "id": keycode.id,
+            //         "list": keycode.list
+            //     }
+            // }
+            // user.devices.forEach(old_device => {
+            //     if (device.brand == old_device.brand) {
+            //         return;
+            //     }
+            //     new_codes.devices.push(old_device);
+            // });
+            // new_codes.devices.push(device);
+            // let json = await codesCtrl.addCodes(new_codes);
+            respon = resdata(0, "Delete RC codes Success", {"result": "success"});
+        } else {
+            // let new_codes = {
+            //     "family_id": req.family_id,
+            //     "user_id": req.user_id,
+            //     "sn": req.sn,
+            //     "rmodel": req.rmodel,
+            //     "devices": []
+            // }
+            // let keycode = JSON.parse(req.keycode);
+            // let device = {
+            //     "devicetypes": req.devicetypes,
+            //     "brand": req.brand,
+            //     "keycode": {
+            //         "id": keycode.id,
+            //         "list": keycode.list
+            //     }
+            // }
+            // new_codes.devices.push(device);
+            // let json = await codesCtrl.addCodes(new_codes);
+            respon = resdata(0, "Delete RC codes Success", {"result": "success"});
+        }
+        return respon;
+    } catch (err) {
+        console.log(err);
+        throw new Error(err);
+        return errdata(err);
+    }
+}
