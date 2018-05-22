@@ -23,7 +23,6 @@ router.post('rc_keycodes/create', async (ctx, next) => {
  * 添加红外码库
  */
 router.post('rc_keycodes/del', async (ctx, next) => {
-    
     console.log(ctx.request.body);
     ctx.body = await rcYaoKanCtrl.del_rc_code(ctx.request.body.data);
 });

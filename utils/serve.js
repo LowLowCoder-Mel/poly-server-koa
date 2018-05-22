@@ -1,6 +1,11 @@
 'use strict'
 
-// 系统级别错误 token过期 无权限 业务级别错误  网络级别错误  数据库错误
+/**
+ * 系统级别错误 token过期 无权限 业务级别错误  网络级别错误  数据库错误
+ * @param {*} code 
+ * @param {*} msg 
+ * @param {*} data 
+ */
 exports.resdata = function (code, msg, data) {
     let _code = code ? code : '100';
     let _msg = msg ? msg : 'success';

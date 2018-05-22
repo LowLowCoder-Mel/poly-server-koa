@@ -94,6 +94,7 @@ exports.add_rc_code = async (data) => {
             let device = {
                 "devicetypes": req.devicetypes,
                 "brand": req.brand,
+                "myname": req.myname,
                 "keycode": {
                     "id": keycode.id,
                     "list": keycode.list
