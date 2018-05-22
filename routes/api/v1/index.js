@@ -20,11 +20,19 @@ router.post('rc_keycodes/create', async (ctx, next) => {
 });
 
 /**
- * 添加红外码库
+ * 删除红外码库
  */
 router.post('rc_keycodes/del', async (ctx, next) => {
     console.log(ctx.request.body);
     ctx.body = await rcYaoKanCtrl.del_rc_code(ctx.request.body.data);
+});
+
+/**
+ * 删除小苹果
+ */
+router.post('rc_user/del', async (ctx, next) => {
+    console.log(ctx.request.body);
+    ctx.body = await rcYaoKanCtrl.del_device(ctx.request.body.data);
 });
 
 module.exports = router;

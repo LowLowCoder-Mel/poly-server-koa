@@ -26,7 +26,7 @@ exports.getCodesByFamilyId = (family_id) => {
 /*
  * 给指定的家庭增加红外码库
  */
-exports.addCodes = (codes) => {
+exports.updateCodes = (codes) => {
     return new Promise(function (resolve, reject) {
         db.getDB().collection('rc_codes', function (err, collection) {
             if (err) {

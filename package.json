@@ -40,6 +40,7 @@
     "sha1": "^1.1.1"
   },
   "devDependencies": {
+    "eslint": "^4.19.1",
     "mocha": "^2.5.3",
     "nodemon": "^1.9.1",
     "should": "^8.3.0",

@@ -169,7 +169,7 @@ function getSignature(data){
 }
 
 /*
- * WebHook通知 钉钉
+ * WebHook通知 倍恰
  */
 exports.NotifyDingDing = (content) => {
     return new Promise(function(resolve, reject){

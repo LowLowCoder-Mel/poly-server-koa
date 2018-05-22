@@ -75,7 +75,7 @@ exports.active = async (data) => {
 }
 
 /**
- * 给指定家庭增加红外码库
+ * 给指定家庭增加小苹果
  */
 exports.add_rc_code = async (data) => {
     let req = JSON.parse(data);
@@ -83,51 +83,66 @@ exports.add_rc_code = async (data) => {
         let respon = {};
         let user = await codesCtrl.getCodesByFamilyId(req.family_id);
         if (user) {
-            let new_codes = {
+            let new_device = {
                 "family_id": user.family_id,
                 "user_id": user.user_id,
-                "sn": req.sn,
-                "rmodel": req.rmodel,
                 "devices": []
             }
-            let keycode = JSON.parse(req.keycode);
             let device = {
+                "sn": req.sn,
+                "remotes": []
+            }
+            let keycode = JSON.parse(req.keycode);
+            let codes = {
+                "myname": req.myname,
                 "devicetypes": req.devicetypes,
                 "brand": req.brand,
-                "myname": req.myname,
+                "rmodel": req.rmodel,
                 "keycode": {
                     "id": keycode.id,
                     "list": keycode.list
                 }
             }
+            // sn是否存在
             user.devices.forEach(old_device => {
-                if (device.brand == old_device.brand) {
-                    return;
+                if (req.sn == old_device.sn) {
+                    old_device.remotes.forEach(remote => {
+                        if (remote.rmodel == req.rmodel) {
+                            return;
+                        }
+                        device.remotes.push(remote);
+                    })
                 }
-                new_codes.devices.push(old_device);
+                user.devices.push(old_device);
             });
-            new_codes.devices.push(device);
-            let json = await codesCtrl.addCodes(new_codes);
+            device.remotes.push(codes);
+            new_device.devices.push(device);
+            let json = await codesCtrl.updateCodes(new_device);
             respon = resdata(0, "Add RC codes Success", {"result": "success"});
         } else {
-            let new_codes = {
+            let new_device = {
                 "family_id": req.family_id,
                 "user_id": req.user_id,
-                "sn": req.sn,
-                "rmodel": req.rmodel,
                 "devices": []
             }
-            let keycode = JSON.parse(req.keycode);
             let device = {
+                "sn": req.sn,
+                "remotes": []
+            }
+            let keycode = JSON.parse(req.keycode);
+            let codes = {
+                "myname": req.myname,
                 "devicetypes": req.devicetypes,
                 "brand": req.brand,
+                "rmodel": req.rmodel,
                 "keycode": {
                     "id": keycode.id,
                     "list": keycode.list
                 }
             }
-            new_codes.devices.push(device);
-            let json = await codesCtrl.addCodes(new_codes);
+            device.remotes.push(codes);
+            new_device.devices.push(device);
+            let json = await codesCtrl.updateCodes(new_device);
             respon = resdata(0, "Add RC codes Success", {"result": "success"});
         }
         return respon;
@@ -139,7 +154,40 @@ exports.add_rc_code = async (data) => {
 }
 
 /**
- * 给指定家庭增加红外码库
+ * 删除指定家庭的小苹果
+ */
+exports.del_device = async (data) => {
+    let req = JSON.parse(data);
+    try {
+        let respon = {};
+        let user = await codesCtrl.getCodesByFamilyId(req.family_id);
+        if (user) {
+            let device = {
+                "family_id": user.family_id,
+                "user_id": user.user_id,
+                "devices": []
+            }
+            user.devices.forEach(old_device => {
+                if (req.sn == old_device.sn) {
+                    return
+                }
+                device.devices.push(old_device);
+            });
+            let json = await codesCtrl.updateCodes(device);
+            respon = resdata(0, "Delete device Success", {"result": "success"});
+        } else {
+            respon = resdata(0, "Delete device Success", {"result": "error"});
+        }
+        return respon;
+    } catch (err) {
+        console.log(err);
+        throw new Error(err);
+        return errdata(err);
+    }
+}
+
+/**
+ * 删除指定家庭红外码库
  */
 exports.del_rc_code = async (data) => {
     let req = JSON.parse(data);
@@ -147,51 +195,27 @@ exports.del_rc_code = async (data) => {
         let respon = {};
         let user = await codesCtrl.getCodesByFamilyId(req.family_id);
         if (user) {
-            // let new_codes = {
-            //     "family_id": user.family_id,
-            //     "user_id": user.user_id,
-            //     "sn": req.sn,
-            //     "rmodel": req.rmodel,
-            //     "devices": []
-            // }
-            // let keycode = JSON.parse(req.keycode);
-            // let device = {
-            //     "devicetypes": req.devicetypes,
-            //     "brand": req.brand,
-            //     "keycode": {
-            //         "id": keycode.id,
-            //         "list": keycode.list
-            //     }
-            // }
-            // user.devices.forEach(old_device => {
-            //     if (device.brand == old_device.brand) {
-            //         return;
-            //     }
-            //     new_codes.devices.push(old_device);
-            // });
-            // new_codes.devices.push(device);
-            // let json = await codesCtrl.addCodes(new_codes);
+            let codes = {
+                "family_id": user.family_id,
+                "user_id": user.user_id,
+                "devices": []
+            }
+            user.devices.forEach(old_device => {
+                if (req.sn == old_device.sn) {
+                    old_device.remotes.forEach(remote => {
+                        if (remote.keycode.id == req.kid) {
+                            old_device.remotes.pop(remote);
+                        }
+                    })
+                    codes.devices.push(old_device);
+                } else {
+                    codes.devices.push(old_device);
+                }
+            });
+            let json = await codesCtrl.updateCodes(codes);
             respon = resdata(0, "Delete RC codes Success", {"result": "success"});
         } else {
-            // let new_codes = {
-            //     "family_id": req.family_id,
-            //     "user_id": req.user_id,
-            //     "sn": req.sn,
-            //     "rmodel": req.rmodel,
-            //     "devices": []
-            // }
-            // let keycode = JSON.parse(req.keycode);
-            // let device = {
-            //     "devicetypes": req.devicetypes,
-            //     "brand": req.brand,
-            //     "keycode": {
-            //         "id": keycode.id,
-            //         "list": keycode.list
-            //     }
-            // }
-            // new_codes.devices.push(device);
-            // let json = await codesCtrl.addCodes(new_codes);
-            respon = resdata(0, "Delete RC codes Success", {"result": "success"});
+            respon = resdata(0, "Delete RC codes Success", {"result": "error"});
         }
         return respon;
     } catch (err) {
