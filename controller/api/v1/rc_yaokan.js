@@ -4,8 +4,9 @@ const activeCtrl = require('../../../models/rc_active');
 const codesCtrl = require('../../../models/rc_codes');
 const logUtil = require('../../../utils/logUtil');
 const apiUtil = require('../../../utils/apiUtil');
-const resdata = require('../../../utils/serve');
-const errdata = require('../../../utils/serve');
+import {
+   resdata, errdata
+} from '../../../utils/serve';
 
 /**
  * 激活遥看设备
