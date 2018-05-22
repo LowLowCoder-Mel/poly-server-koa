@@ -4,10 +4,8 @@ const activeCtrl = require('../../../models/rc_active');
 const codesCtrl = require('../../../models/rc_codes');
 const logUtil = require('../../../utils/logUtil');
 const apiUtil = require('../../../utils/apiUtil');
-import {
-    resdata,
-    errdata
-} from '../../../utils/serve';
+const resdata = require('../../../utils/serve');
+const errdata = require('../../../utils/serve');
 
 /**
  * 激活遥看设备
@@ -176,7 +174,7 @@ exports.del_device = async (data) => {
             let json = await codesCtrl.updateCodes(device);
             respon = resdata(0, "Delete device Success", {"result": "success"});
         } else {
-            respon = resdata(0, "Delete device Success", {"result": "error"});
+            respon = resdata(0, "Delete device Success", {"result": "success"});
         }
         return respon;
     } catch (err) {

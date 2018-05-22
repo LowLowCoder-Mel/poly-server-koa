@@ -13,7 +13,7 @@ const logger = require('koa-logger');
 const loggers = require('./middleware/loggers');
 const router = require('./routes/index');
 const db = require('./config/dbConfig');
-const statsd = require('./middleware/statsd');
+// const statsd = require('./middleware/statsd');
 
 const app = new Koa();
 
@@ -39,12 +39,12 @@ app.use(views(__dirname + '/views', {
 app.use(router.routes(), router.allowedMethods());
 
 app.on('error', function (err, ctx) {
-  console.log(err)
+  console.log(err, ctx);
   console.error('server handler error');
 });
 
 let apiUtil = require('./utils/apiUtil');
-let server = process.env.NODE_ENV == 'dev' ? "测试版" : "正式版";
+let server = process.env.NODE_ENV == 'dev' ? '测试版' : '正式版';
 let date = new Date();
 let content = `Service: poly_3device \nTime   : ${date.toLocaleString()}\n已在${server}服务器上运行`;
 
