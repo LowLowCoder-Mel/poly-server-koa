@@ -8,7 +8,7 @@ before_install:
 - chmod 600 ~/.ssh/id_rsa
 - echo -e "Host 60.205.151.71\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 - echo -e "Host 123.57.139.200\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
-install: npm install
+install: npm install --registry=https://registry.npm.taobao.org
 script: npm run test
 branches:
   only:
