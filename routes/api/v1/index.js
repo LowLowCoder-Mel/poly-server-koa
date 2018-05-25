@@ -28,6 +28,14 @@ router.post('rc_keycodes/del', async (ctx, next) => {
 });
 
 /**
+ * 发送红外码库
+ */
+router.post('rc_keycodes/cmd', async (ctx, next) => {
+    console.log(ctx.request.body);
+    ctx.body = await rcYaoKanCtrl.del_rc_code(ctx.request.body.data);
+});
+
+/**
  * 删除小苹果
  */
 router.post('rc_user/del', async (ctx, next) => {

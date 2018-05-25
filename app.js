@@ -19,6 +19,9 @@ const app = new Koa();
 
 app.use(convert.compose(
   koabody({
+    "formLimit": "5mb",
+    "jsonLimit": "5mb",
+    "textLimit": "5mb",
     multipart: true
   }),
   bodyparser,
